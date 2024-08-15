@@ -9,38 +9,15 @@
     <!-- レスポンシブ表示の記述 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- サイトのタイトル記述 -->
-    <title>SUISOPOT</title>
+    <title>Fresh Grove</title>
     <!-- サイトの概要を記述 -->
-    <meta name="description" content="SUISOPOT" />
+    <meta name="description" content="Fresh Grove" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- swiper  -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <!-- スタイルシートを記述(headタグの直前) -->
     <link rel="stylesheet" href="./css/destyle.css" />
@@ -48,1252 +25,872 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__inner">
+    <header class="header js-header change-color">
+      <div class="header__inner inner">
         <h1 class="header__logo">
-          <a href=""
+          <a href="#"
             ><img src="./img/header__logo.png" loading="lazy" alt=""
           /></a>
         </h1>
         <nav class="header__nav">
-          <a href="#feature" class="header__link">特長</a>
-          <a href="#users" class="header__link">お客様の声</a>
-          <a href="#flow" class="header__link">ご利用料金</a>
-          <a href="#price" class="header__link">ご利用までの流れ</a>
-          <a href="#qa" class="header__link">よくある質問</a>
+          <a href="#about" class="header__link">About</a>
+          <a href="#values" class="header__link">Values</a>
+          <a href="#price" class="header__link">Price</a>
+          <a href="#faq" class="header__link">FAQ</a>
         </nav>
-        <div class="header__tel">
-          <div class="header__left">
-            <img src="./img/header__tel.png" loading="lazy" alt="" />
-          </div>
-          <p class="header__right">平日受付 9:00-17:00(祝日を除く)</p>
-        </div>
         <div class="header__nav-button">
-          <a href="#button" class="header__button button">資料請求</a>
+          <a href="#button" class="header__button">問い合わせをする</a>
         </div>
-        <div class="header__nav-button">
-          <a href="#button" class="header__button button">新規お申込</a>
+        <div class="header__nav-button2">
+          <a href="#button" class="header__button2">
+            <div class="header__button2-top">最短<span>1</span>分で完了！</div>
+            <div class="header__button2-bottom">
+              <span>無料</span>で資料を請求する
+            </div>
+          </a>
         </div>
-        <div class="header__nav-button-sp">
-          <a href="#button" class="header__button button-sp">新規お申込</a>
-        </div>
+
         <button id="js-drawer-icon" class="header__open drawer-icon">
           <span class="drawer-icon__bar"></span>
           <span class="drawer-icon__bar"></span>
           <span class="drawer-icon__bar"></span>
         </button>
       </div>
+      <div id="js-drawer-content" class="drawer-content">
+        <nav class="drawer-content__menu">
+          <a href="#about" class="drawer-content__link"><span>About</span></a>
+          <a href="#values" class="drawer-content__link"><span>Values</span></a>
+          <a href="#price" class="drawer-content__link"><span>Price</span></a>
+          <a href="#faq" class="drawer-content__link"><span>FAQ</span></a>
+        </nav>
+      </div>
     </header>
 
-    <div id="js-drawer-content" class="drawer-content">
-      <nav class="drawer-content__menu">
-        <a href="#concept" class="drawer-content__link">特長</a>
-        <a href="#feature" class="drawer-content__link">お客様の声</a>
-        <a href="#products" class="drawer-content__link">ご利用料金</a>
-        <a href="#news" class="drawer-content__link">ご利用までの流れ</a>
-        <a href="#contact" class="drawer-content__link">よくある質問</a>
-      </nav>
-
-      <div class="drawer-bottom">
-        <div class="drawer-tel">
-          <img src="./img/header__tel.png" loading="lazy" alt="" />
-        </div>
-        <p class="drawer-time">平日受付 9:00-17:00(祝日を除く)</p>
-
-        <div class="drawer-nav-button">
-          <a href="#button" class="drawer-button">資料請求</a>
-          <a href="#button" class="drawer-button">新規お申込</a>
-        </div>
-      </div>
-    </div>
-    <div class="drawer-bg"></div>
-
-    <div class="mv">
-      <div class="mv__inner">
-        <div class="mv__image">
-          <picture>
-            <source srcset="./img/mv__image.png" media="(min-width: 900px)" />
-            <img src="./img/sp/mv__image.jpg" alt="mv" />
-          </picture>
-        </div>
-      </div>
-    </div>
-
-    <div class="campaign__container">
-      <div class="campaign">
-        <div class="campaign__inner">
-          <div class="campaign__image">
-            <picture>
-              <source
-                srcset="./img/campaign__cta.png"
-                media="(min-width: 900px)"
-              />
-              <img src="./img/sp/campaign__cta.png" alt="fv" />
-            </picture>
-          </div>
-          <div class="campaign__btn">
-            <a href="#">資料請求<br class="pc-hidden" />する</a>
+    <div class="fv-pc">
+      <div class="fv-pc__inner">
+        <div class="fv-pc__inner2">
+          <div class="fv-pc__body">
+            <p class="fv-pc__title">
+              AIで<br />
+              業務効率<br />
+              アップ！
+            </p>
+            <p class="fv-pc__lead">
+              お客様のニーズに合わせて<br />
+              最適なAIソリューションを<br />
+              ご提供します。
+            </p>
+            <div class="fv-pc__image">
+              <img src="./img/fv__image6.png" loading="lazy" alt="" />
+            </div>
+            <div class="fv-pc__image2">
+              <img src="./img/fv__image7.png" loading="lazy" alt="" />
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="problem">
-      <div class="problem__inner">
-        <h2 class="problem__title">こんなお悩みありませんか?</h2>
-        <div class="problem__wrapper">
-          <div class="problem__left">
-            <picture>
-              <source
-                srcset="./img/problem__left-iamge.png"
-                media="(min-width: 900px)"
-              />
-              <img src="./img/sp/problem__left-iamge.png" alt="mv" />
-            </picture>
+    <div class="fv-sp">
+      <div class="fv-sp__inner">
+        <div class="fv-sp__inner2">
+          <div class="fv-sp__body">
+            <p class="fv-sp__title">
+              AIで<br />
+              業務効率<br />
+              アップ！
+            </p>
+            <p class="fv-sp__lead">
+              お客様のニーズに合わせて 最適なAI<br />ソリューションをご提供します。
+            </p>
           </div>
-          <div class="problem__right">
-            <ul class="problem__list">
-              <li class="problem__item">手軽に健康を手に入れたい</li>
-              <li class="problem__item">そろそろお水にもこだわりたい</li>
-              <li class="problem__item">腸活何からしたら良いかわからない</li>
-            </ul>
+          <div class="fv-sp__nav-button2">
+            <a href="#button" class="fv-sp__button2">
+              <div class="fv-sp__button2-top">最短<span>1</span>分で完了！</div>
+              <div class="fv-sp__button2-bottom">
+                <span>無料</span>で資料を請求する
+              </div>
+            </a>
           </div>
-        </div>
-        <div class="problem__bottom">
-          <p class="problem__text">それに、活性酸素が増えると、様々な影響が…</p>
+          <div class="fv-sp__nav-button">
+            <a href="#button" class="fv-sp__button">問い合わせをする</a>
+          </div>
+          <div class="fv-sp__image">
+            <img src="./img/fv__image6.png" loading="lazy" alt="" />
+          </div>
+          <div class="fv-sp__image2">
+            <img src="./img/fv__image7.png" loading="lazy" alt="" />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <div class="solution">
-      <div class="solution__inner inner">
-        <h2 class="solution__title section__title tab-block">
-          <span class="tab-block">そんなお悩みや心配は</span>
-          <span class="tab-horizontal pc-horizontal center">
-            <img
-              class="name-image"
-              src="./img/solution__logo.png"
-              loading="lazy"
-              alt=""
-            />
-            <span>が解決します</span>
-          </span>
-        </h2>
-        <p class="solution__lead">
-          SUISOPOTは手軽にナノバブル水素水を<br
-            class="pc-hidden"
-          />作れるサーバーです
+    <div class="problem-pc">
+      <div class="problem-pc__inner">
+        <p class="problem-pc__title">
+          現場の<span>AI活用</span>について、こんなお悩みはありませんか？
         </p>
-        <div class="solution__items">
-          <div class="solution__item">
-            <div class="solution__image">
-              <img src="./img/solution__circle1.png" loading="lazy" alt="" />
-            </div>
-            <div class="solution__image">
-              <img src="./img/solution__circle2.png" loading="lazy" alt="" />
-            </div>
-            <div class="solution__image">
-              <img src="./img/solution__circle3.png" loading="lazy" alt="" />
-            </div>
+        <div class="problem-pc__items">
+          <div class="problem-pc__item1">
+            <img src="./img/problem__image1.png" loading="lazy" alt="" />
+          </div>
+          <div class="problem-pc__item2">
+            <img src="./img/problem__image2.png" loading="lazy" alt="" />
+          </div>
+          <div class="problem-pc__item3">
+            <img src="./img/problem__image3.png" loading="lazy" alt="" />
           </div>
         </div>
-        <div class="solution__wrapper">
-          <p class="solution__sub-title">
-            そもそも、<br class="pc-hidden" />ナノバブル水素水って？
+        <div class="problem-pc__image">
+          <img src="./img/problem__image4.png" loading="lazy" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-sp">
+      <div class="problem-sp__inner">
+        <p class="problem-sp__title">
+          現場の<span>AI活用</span>について、<br />こんなお悩みはありませんか？
+        </p>
+        <div class="problem-sp__image">
+          <img src="./img/sp/problem__image.png" loading="lazy" alt="" />
+        </div>
+        <div class="problem-sp__image2">
+          <img src="./img/sp/problem__bg2.png" loading="lazy" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-pc">
+      <div class="solution-pc__inner inner">
+        <div class="solution-pc__items">
+          <div class="solution-pc__item1">
+            <img src="./img/solution__left.png" loading="lazy" alt="" />
+          </div>
+          <div class="solution-pc__item2">
+            <img src="./img/solution__center.png" loading="lazy" alt="" />
+          </div>
+          <div class="solution-pc__item3">
+            <img src="./img/solution__right.png" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-sp">
+      <div class="solution-sp__inner inner">
+        <div class="solution-sp__image">
+          <img src="./img/sp/solution__center.png" loading="lazy" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">特徴</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">Features</p>
+        </div>
+        <div class="feature__wrapper feature__wrapper1">
+          <div class="feature__left">
+            <h3 class="feature__title feature__title1">
+              領域を<span>自由に組み合わせ</span><br />
+              問題に沿った<br />
+              解決法を導きます
+            </h3>
+            <p class="feature__text">
+              当社がこれまでに培ってきたAI機能や独自の知見を導入。ご提供するAI領域を自由に組み合わせて<span>プライベートAPIとしてご活用</span>いただけます。
+            </p>
+          </div>
+          <div class="feature__right">
+            <img src="./img/feature__image1.png" loading="lazy" alt="" />
+          </div>
+        </div>
+        <div class="feature__wrapper feature__wrapper2">
+          <div class="feature__left">
+            <h3 class="feature__title feature__title2">
+              詳しい<span
+                >AIの知識は<br />
+                いりません</span
+              >
+            </h3>
+            <p class="feature__text">
+              ノーコードツールであり、どなたでも簡単にご導入いただけます。ご導入時にfresh
+              groveの使用方法についてお伝えいたしますのでご安心ください。現場の担当者が使用しますので、<span>外注や専門家雇用よりも素早く業務改善を実現</span>していただけます。
+            </p>
+          </div>
+          <div class="feature__right2">
+            <img src="./img/feature__image2.png" loading="lazy" alt="" />
+          </div>
+        </div>
+        <div class="feature__wrapper feature__wrapper3">
+          <div class="feature__left">
+            <h3 class="feature__title feature__title3">
+              継続的な収益や<br />
+              <span
+                >成長の実現に向けて<br />
+                伴走</span
+              >いたします
+            </h3>
+            <p class="feature__text">
+              課題解決に向けたコンサルティングとデータ分析をご支援し、継続的にサポートいたします。<span>プロジェクトが自走できるまで伴走</span>します。
+            </p>
+          </div>
+          <div class="feature__right">
+            <img src="./img/feature__image3.png" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="functions">
+      <div class="functions__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">機能</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">FUNCTIONS</p>
+        </div>
+        <div class="functions__lead">
+          <div class="functions__lead-image">
+            <img src="./img/functions__text.png" loading="lazy" alt="" />
+          </div>
+          <p class="functions__lead-text">
+            最新のAPIを駆使し、業種を問わず幅広い現場で、<br />
+            <span>包括的なソリューションとしてワンストップで利用できる</span
+            ><br />
+            状況が整っております。
           </p>
-          <div class="solution__chats">
-            <div class="solution__chat left solution__chat1 left1">
-              <figure class="solution__icon">
-                <img src="./img/solution__icon.png" alt="" />
-              </figure>
-              <div class="solution__chatting">
-                <p class="solution__chatting-text">
-                  ナノバブル水素水について説明します！<br />
-                  まず、水素は、<span>悪玉な活性酸素を消去する抗酸化作用</span>
-                  があります！<br />
-                  だから、日々の健康に役立てる事ができるんです！<br />
-                  しかも、様々な病気の治療への利用が始まっています！
-                </p>
-              </div>
+        </div>
+        <div class="functions__items">
+          <div class="functions__item">
+            <div class="functions__image">
+              <img src="./img/functions__icon1.png" loading="lazy" alt="" />
             </div>
-            <div class="solution__chat right">
-              <figure class="solution__icon">
-                <img src="./img/solution__icon2.png" alt="" />
-              </figure>
-              <div class="solution__chatting2">
-                <p class="solution__chatting-text">
-                  なるほど！だから近年水素ブームが来ているんですね！
-                </p>
-              </div>
-            </div>
-            <div class="solution__chat left solution__chat2 left2">
-              <figure class="solution__icon">
-                <img src="./img/solution__icon.png" alt="" />
-              </figure>
-              <div class="solution__chatting">
-                <p class="solution__chatting-text">
-                  それから、ナノバブルというのは、こんなに小さな泡の事です！
-                </p>
-              </div>
-            </div>
+            <h3 class="functions__title functions__title1">AI画像生成</h3>
+            <p class="functions__text">
+              グラフィックやデザインコンセプトなど<span>高品質の画像を生成します</span>。
+            </p>
           </div>
-          <div class="solution__image2">
-            <img src="./img/solution__image.png" loading="lazy" alt="" />
-          </div>
-          <div class="solution__chat left solution__chat3 left3">
-            <div class="solution__chatting">
-              <p class="solution__chatting-text">
-                この泡のスゴイ所は浸透力と持続力！
-              </p>
+          <div class="functions__item">
+            <div class="functions__image">
+              <img src="./img/functions__icon2.png" loading="lazy" alt="" />
             </div>
+            <h3 class="functions__title functions__title2">AIライティング</h3>
+            <p class="functions__text">
+              <span>高品質のテキストを即座に生成できる</span
+              >ように設計されています。
+            </p>
           </div>
-          <div class="solution__chat left solution__chat4 left4">
-            <div class="solution__chatting">
-              <p class="solution__chatting-text">
-                「ナノバブル水素水」には、この泡が1ccあたり3億3,000万個という高濃度のナノバブルを含んでいます。<br />
-                <span>大量のナノバブルが素早く体内に水素と酸素を浸透させる</span
-                >事ができるんです！
-              </p>
+          <div class="functions__item">
+            <div class="functions__image">
+              <img src="./img/functions__icon3.png" loading="lazy" alt="" />
             </div>
+            <h3 class="functions__title functions__title3">AIチャット</h3>
+            <p class="functions__text">
+              予約の予約、製品の推奨事項の取得など、<span>質問に対する答えがすぐに得られます</span>。
+            </p>
           </div>
-          <div class="solution__chat right solution__chat5 right5">
-            <figure class="solution__icon">
-              <img src="./img/solution__icon2.png" alt="" />
-            </figure>
-            <div class="solution__chatting2">
-              <p class="solution__chatting-text">
-                ナノバブルって凄い！普通の水素水とは全然違うのね！
-              </p>
+          <div class="functions__item">
+            <div class="functions__image">
+              <img src="./img/functions__icon4.png" loading="lazy" alt="" />
             </div>
+            <h3 class="functions__title functions__title4">
+              音声をテキストへAI変換
+            </h3>
+            <p class="functions__text">
+              数回クリックするだけで<span>わずか数分で録音を正確に文字起こしをします</span>。
+            </p>
           </div>
+          <div class="functions__item">
+            <div class="functions__image">
+              <img src="./img/functions__icon5.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="functions__title functions__title5">AIボイスオーバー</h3>
+            <p class="functions__text">
+              <span
+                >比類のない多用途性、自然なイントネーションを備えたAI 音声</span
+              >が言葉に命を吹き込みます。
+            </p>
+          </div>
+          <div class="functions__item">
+            <div class="functions__image">
+              <img src="./img/functions__icon6.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="functions__title functions__title6">AIコーディング</h3>
+            <p class="functions__text">
+              コーディング
+              プロセスを合理化し、<span>速く、簡単に、効率的に行えるよう設計されています</span>。
+            </p>
+          </div>
+        </div>
+        <div class="functions__link">
+          <a href="#">さらに詳しく見る</a>
         </div>
       </div>
     </div>
 
-    <section class="point">
-      <div class="point__inner inner">
-        <h2 class="point__title">
-          ナノバブル水素水って<br class="pc-hidden" />何が良いの？
-        </h2>
-        <div class="point__wrapper">
-          <div class="point__image-sp">
-            <img src="./img/point__num1.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__left">
-            <img src="./img/point__image1.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__right">
-            <div class="point__image-pc">
-              <img src="./img/point__num1.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="point__h3-title">
-              ナノバブル水素で長期間活性酸素を抑える
-            </h3>
-            <p class="point__text">
-              「ナノバブル水素水」は、1ccあたり3億3,000万個という高濃度のナノバブルを含んでいます。この微細な泡は、水素を長期間保持し、体内に浸透させることができます。長期間酸化を抑えることができるので、近年注目度が高まっています。
-            </p>
-          </div>
-        </div>
-        <div class="point__wrapper point__wrapper2">
-          <div class="point__image-sp">
-            <img src="./img/point__num2.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__left point__left2">
-            <img src="./img/point__image2.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__right">
-            <div class="point__image-pc">
-              <img src="./img/point__num2.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="point__h3-title point__h3-title2">腸内に働きかける</h3>
-            <p class="point__text">
-              ヒトフローラマウスを用いた共同研究の試験では、腸内のビフィズス菌が増加、悪玉菌が減少した結果となりました。<br />
-              <span> (15日間ナノバブル水素水を飲水させた試験)</span>
-            </p>
-          </div>
-        </div>
-        <div class="point__wrapper point__wrapper3">
-          <div class="point__image-sp">
-            <img src="./img/point__num3.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__left">
-            <img src="./img/point__image3.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__right">
-            <div class="point__image-pc">
-              <img src="./img/point__num3.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="point__h3-title point__h3-title3">
-              フィルター不要で93％の塩素を除去
-            </h3>
-            <p class="point__text">
-              塩素を93％も除去することができ、水道水を美味しく健康的なナノバブル水素水に生まれ変わらせます。<br />
-              <span
-                >（SUISOPOTで120分間、電気分解した場合）<br />
-                ※日本食品分析センターでの試験結果。</span
-              >
-            </p>
-          </div>
-        </div>
-        <div class="point__wrapper point__wrapper4">
-          <div class="point__image-sp">
-            <img src="./img/point__num4.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__left">
-            <img src="./img/point__image4.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__right">
-            <div class="point__image-pc">
-              <img src="./img/point__num4.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="point__h3-title point__h3-title4">ミネラル豊富な水</h3>
-            <p class="point__text">
-              SUISOPOT(スイソポット）に付属のミネラルプレートが生み出す、豊富なイオン化されたミネラル成分が溶け出すことにより、マグネシウムや亜鉛を含んだ味わい豊かなおいしいお水をつくりだすことができます。<br />
-              <span
-                >※マグネシウム1.76倍、亜鉛1.25倍。<br />
-                日本食品分析センターでの試験結果。</span
-              >
-            </p>
-          </div>
-        </div>
-        <div class="point__wrapper point__wrapper5">
-          <div class="point__image-sp">
-            <img src="./img/point__num5.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__left">
-            <img src="./img/point__image5.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__right">
-            <div class="point__image-pc">
-              <img src="./img/point__num5.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="point__h3-title point__h3-title5">
-              身体への負担が少ない中性水
-            </h3>
-            <p class="point__text">
-              一般的な水素水は、アルカリ性に傾いているものがほとんどです。アルカリ性の水素水もメリットはございますが、中性のお水の方が身体への負担は少ないと考えられており、ｐHの偏りを気にすることなくご飲用いただけます。
-            </p>
-          </div>
-        </div>
-        <div class="point__wrapper point__wrapper6">
-          <div class="point__image-sp">
-            <img src="./img/point__num6.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__left">
-            <img src="./img/point__image6.png" loading="lazy" alt="" />
-          </div>
-          <div class="point__right">
-            <div class="point__image-pc">
-              <img src="./img/point__num6.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="point__h3-title point__h3-title6">
-              お肌に優しいので洗顔にもオススメ
-            </h3>
-            <p class="point__text">
-              水に溶け込んだ無数の小さな泡が、お肌の角質の奥にまで入り込んでキレイにしてくれます。さっと洗い流すだけですっきりとした透明肌へと導いてくれます。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="cta__bg">
-      <img src="./img/cta__bg.png" loading="lazy" alt="" />
-    </div>
-    <section class="cta">
+    <div class="cta">
       <div class="cta__inner inner">
-        <div class="cta__title-container">
-          <h2 class="cta__title center tab-direction-column">
-            <div>さっそく<span>ナノバブル水素水</span>の</div>
-            <div>ある生活を始めてみましょう</div>
-          </h2>
-        </div>
-        <div class="cta__wrapper">
-          <div class="cta__left">
-            <div class="cta__image1">
-              <img src="./img/cta__text1.png" loading="lazy" alt="" />
-            </div>
-            <div class="cta__btn">
-              <a href="#" class="button">無料で資料請求をする</a>
-            </div>
-          </div>
-          <div class="cta__right">
-            <div class="cta__image2">
-              <img src="./img/cta__text2.png" loading="lazy" alt="" />
-            </div>
-            <div class="cta__btn cta__btn2">
-              <a href="#" class="button">新規お申込</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="cta__image-sp">
-      <img src="./img/cta__image.png" loading="lazy" alt="" />
-    </div>
-
-    <section class="room">
-      <div class="room__inner inner">
-        <h2 class="room__title section__title">どんなお部屋にもピッタリ</h2>
-        <p class="room__text">
-          ホワイトとシルバーを基調にしたデザイン＆<br
-            class="pc-hidden"
-          />コンパクトサイズ<br />
-          どんなインテリアにも馴染むシンプルなデザイン
-        </p>
-        <div class="room__items">
-          <div class="room__item">
-            <div class="room__image">
-              <img src="./img/room__image1.png" loading="lazy" alt="" />
-            </div>
-            <div class="room__image2">
-              <img src="./img/room__image2.png" loading="lazy" alt="" />
-            </div>
-            <div class="room__image">
-              <img src="./img/room__image3.png" loading="lazy" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slider">
-      <div class="slider__inner inner">
-        <h2 class="slider__title section__title">使い方はいろいろ</h2>
-        <p class="slider__text">
-          健康的な生活のための飲用水としてはもちろん、お茶やお料理にもお使いいただけます。<br />
-          さらに、ペットの飲用水、植物の水やり、お肌を整えるための洗顔など、<br
-            class="sp-hidden"
-          />
-          ライフスタイルに合わせて、幅広く活用ができます。
-        </p>
-
-        <div class="swiper__container">
-          <div class="swiper__botton">
-            <div id="js-slider-pagination" class="swiper-pagination"></div>
-
-            <div id="js-slider-prev" class="swiper-button-prev"></div>
-            <div id="js-slider-next" class="swiper-button-next"></div>
-          </div>
-          <div id="js-slider-swiper1" class="swiper1">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image1.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">お茶やコーヒー</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image2.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">野菜の洗浄</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image3.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">植物の水やり</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image4.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">ペットの飲用水</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image5.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">洗顔</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image6.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">お料理</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image">
-                    <img src="./img/how-to__image7.png" alt="" />
-                  </div>
-                  <div class="slider-card__body">
-                    <h3 class="slider-card__title">お酒の割り水</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reason">
-      <div class="reason__inner inner">
-        <h2 class="reason__header-title-pc section__title">
-          SUISOPOTがオススメな理由
-        </h2>
-        <h2 class="reason__header-title-sp section__title">
-          SUIREX5がオススメな理由
-        </h2>
-        <div class="reason__items">
-          <div class="reason__item">
-            <div class="reason__image-pc">
-              <img src="./img/reason__image1.png" loading="lazy" alt="" />
-            </div>
-            <div class="reason__image-sp">
-              <img src="./img/reason__image-sp1.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="reason__title">水道水を注ぐだけ</h3>
-            <p class="reason__text">
-              付属のタンクに水道水を注いでスイッチを入れるだけ！自宅でたっぷり5リットル（コップ約25杯分）のナノバブル水素水をつくれます。
-            </p>
-          </div>
-          <div class="reason__item reason__item2">
-            <div class="reason__image-pc">
-              <img src="./img/reason__image2.png" loading="lazy" alt="" />
-            </div>
-            <div class="reason__image-sp">
-              <img src="./img/reason__image-sp2.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="reason__title">超省エネ設計で経済的</h3>
-            <p class="reason__text">
-              必要なときにナノバブル水素水を生成するため、電気代は月々約30円と省エネ設計。月1,000円程度の電気代がかかるウォーターサーバーと比較すると1/30のコストで済みます。
-            </p>
-          </div>
-          <div class="reason__item">
-            <div class="reason__image-pc">
-              <img src="./img/reason__image3.png" loading="lazy" alt="" />
-            </div>
-            <div class="reason__image-sp">
-              <img src="./img/reason__image-sp3.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="reason__title">コンパクトサイズ</h3>
-            <p class="reason__text">
-              直径30cm程度でコンパクトだから置き場所も自由自在！コンセントのある場所であれば、キッチンやダイニングなどお好きな場所に設置いただけます。
-            </p>
-          </div>
-          <div class="reason__item reason__item4">
-            <div class="reason__image-pc">
-              <img src="./img/reason__image4.png" loading="lazy" alt="" />
-            </div>
-            <div class="reason__image-sp">
-              <img src="./img/reason__image-sp4.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="reason__title">環境に優しい</h3>
-            <p class="reason__text">
-              SUIREX5をご利用いただくことで、年間約3,600本分ものペットボトルを削減でき、年間350㎏の温暖化ガス削減効果があります。
-            </p>
-          </div>
-          <div class="reason__item reason__item5">
-            <div class="reason__image-pc">
-              <img src="./img/reason__image5.png" loading="lazy" alt="" />
-            </div>
-            <div class="reason__image-sp">
-              <img src="./img/reason__image-sp5.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="reason__title">設置工事不要</h3>
-            <p class="reason__text">
-              設置時間も工事費も不要で経済的！
-              プラグをコンセントに差し込むだけで届いたその日からどこでも、すぐにご使用いただけます。
-            </p>
-          </div>
-          <div class="reason__item">
-            <div class="reason__image-pc">
-              <img src="./img/reason__image6.png" loading="lazy" alt="" />
-            </div>
-            <div class="reason__image-sp">
-              <img src="./img/reason__image-sp6.png" loading="lazy" alt="" />
-            </div>
-            <h3 class="reason__title">簡単メンテナンス</h3>
-            <p class="reason__text">
-              毎日のお手入れ不要！電極部など全ての部品がみえていますので、お手入れの際も簡単衛生的に行えます！
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="effect">
-      <div class="effect__inner inner">
-        <h2 class="effect__title">
-          ナノバブル水素水の有用性や<br class="pc-hidden" />新たな可能性を開拓
-        </h2>
-        <p class="effect__text">国内の大学や研究機関との共同研究の一例</p>
-        <div class="effect__chats">
-          <div class="effect__chat left effect__chat1 left1">
-            <figure class="effect__icon1">
-              <img src="./img/effect__icon1.png" alt="" />
-            </figure>
-            <div class="effect__chatting effect__chatting1">
-              <p class="effect__chatting-text">
-                ナノバブル水素水に大腸菌、黄色ブドウ球菌を24時間培養。<br />
-                <span>大腸菌を99.8％減少、黄色ブドウ球菌は99.6％減少</span
-                >するなどの 除菌効果 が見られました。
-              </p>
-            </div>
-          </div>
-          <div class="effect__chat right">
-            <figure class="effect__icon2">
-              <img src="./img/effect__icon2.png" alt="" />
-            </figure>
-            <div class="effect__chatting2">
-              <p class="effect__chatting-text">
-                ナノバブル水素水を肌に塗布することで、シミのもととなる
-                <span>メラニンを生成する酵素を抑制する効果</span
-                >が確認されました。
-              </p>
-            </div>
-          </div>
-          <div class="effect__chat left effect__chat2 left2">
-            <figure class="effect__icon1">
-              <img src="./img/effect__icon1.png" alt="" />
-            </figure>
-            <div class="effect__chatting effect__chatting3">
-              <p class="effect__chatting-text">
-                ヒト細胞内にナノバブル水素水と活性酸素（過酸化水素）を同時に添加する試験で、<span
-                  >細胞内の活性酸素が減少する効果</span
-                >
-                が確認されました。
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="banner">
-      <div class="banner__inner inner">
-        <div class="banner__image">
-          <picture>
-            <source srcset="img/banner__image.png" media="(min-width: 900px)" />
-            <img src="img/sp/banner__image.png" alt="”fv”" />
-          </picture>
-        </div>
-      </div>
-    </div>
-
-    <section class="compare">
-      <div class="compare__inner inner">
-        <h2 class="compare__title section__title">他のお水との比較</h2>
-        <div class="compare__wrapper">
-          <table class="compare__table">
-            <tbody>
-              <tr>
-                <th class="compare__space"></th>
-                <th class="compare__bg">
-                  <img src="./img/compare__logo.png" loading="lazy" alt="" />
-                </th>
-                <th class="compare__color">ペットボトル</th>
-                <th class="compare__color">ウォーターサーバー</th>
-                <th>
-                  浄水器<br />
-                  (蛇口貯血型)
-                </th>
-              </tr>
-              <tr>
-                <th class="compare__color2">電気代</th>
-                <td class="compare__color3">30円</td>
-                <td>不要</td>
-                <td>1,000円</td>
-                <td>0円</td>
-              </tr>
-              <tr>
-                <th class="compare__color2">メンテナス費用</th>
-                <td class="compare__color3">不要</td>
-                <td>不要</td>
-                <td>月一回</td>
-                <td>
-                  2〜4ヶ月で<br />
-                  フィルターを交換
-                </td>
-              </tr>
-              <tr>
-                <th class="compare__color2">水道料金</th>
-                <td class="compare__color3">約25円/月</td>
-                <td>3,000/月〜</td>
-                <td>3,000/月〜</td>
-                <td>約25円/月</td>
-              </tr>
-              <tr>
-                <th class="compare__color2">解約のしやすさ</th>
-                <td class="compare__color3">いつでも可能</td>
-                <td>不要</td>
-                <td>定期契約</td>
-                <td>不要</td>
-              </tr>
-              <tr>
-                <th class="compare__color2">健康志向</th>
-                <td class="compare__color3 compare__color4">◎</td>
-                <td>◯</td>
-                <td>不要</td>
-                <td>△</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <div class="campaign__container">
-      <div class="campaign">
-        <div class="campaign__inner">
-          <div class="campaign__image">
-            <picture>
-              <source
-                srcset="./img/campaign__cta.png"
-                media="(min-width: 900px)"
-              />
-              <img src="./img/sp/campaign__cta.png" alt="fv" />
-            </picture>
-          </div>
-          <div class="campaign__btn">
-            <a href="#">資料請求<br class="pc-hidden" />する</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="slider2">
-      <div class="slider__inner2 inner">
-        <h2 class="slider__title section__title">お客様の声</h2>
-        <div class="swiper__container2">
-          <div class="swiper__botton2">
-            <div id="js-slider-prev2" class="swiper-button-prev2"></div>
-            <div id="js-slider-next2" class="swiper-button-next2"></div>
-          </div>
-          <div id="js-slider-swiper2" class="swiper2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice1.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      子供にはいい水を飲ませたい。だからSUISOPOTを使用。
-                    </h3>
-                    <div class="slider-card__voice">
-                      <p class="accordion-content">
-                        子供が産まれてからは子供が口にするものをすごく考えるようになりました。
-                        例え親が水道水を飲んでいても、息子にだけにはいいものを食べさせたり飲ませたりします（笑）
-                        子供にはずっと笑っていて欲しいですからね。
-                      </p>
-                      <p class="slider-card__voice-left">T様 （東京都 40代）</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice2.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      ナノバブル水素水が飲み放題なマシンです。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        本体に水道水を注ぐだけで小さな泡を含んだナノバブル水素水がつくり放題だという点に興味を持ちました。
-                      </p>
-                      <p class="slider-card__voice-left">田中菜々子様</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice3.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      毎日の生活には、SUISOPOTのお水は欠かせません。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        SUISOPOTを使用して約3年です。
-                        毎日SUISOPOTのお水を飲んだけでなく、化粧水代わりにお肌にスプレーをするなど大活躍です。
-                        重いペットボトルの水を買わなくて済む点も嬉しいです。
-                      </p>
-                      <p class="slider-card__voice-left">Y様 （東京都 80代）</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice4.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      家族の健康のために。毎日飲む水はやはり身体に良いものじゃないと。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        毎朝起きて最初に飲むのがSUISOPOTでできたナノバブル水素水です。
-                        自宅の水道水だけで簡単につくれるのもいいですね。
-                      </p>
-                      <p class="slider-card__voice-left">杉本健太郎様</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice5.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      毎日お腹スッキリ！身体も軽やかになりました。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        口当たりがまろやかで、毎日家族みんなでゴクゴク飲んでいます。やっぱり家族が毎日飲むお水にはしっかりとこだわりたいですね。
-                      </p>
-                      <p class="slider-card__voice-left">H様（千葉県 40代）</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice6.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      SUIREX5は健康維持の頼もしいパートナーです。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        もともと小型の浄水器を使用していましたが、より健康を意識して探していたところ「SUISOPOT」に出会いました。
-                        そのまま飲むだけでなく、お茶やコーヒー、野菜の洗浄など1台で何役もこなしてくれるのも「SUISOPOT」の魅力です。
-                      </p>
-                      <p class="slider-card__voice-left">
-                        H様（神奈川県 40代）
-                      </p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice7.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      水の舌触りが柔らかく、市販のミネラルウォーターと比べても味が美味しい。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        健康診断をきっかけにナノバブル水素水の｢SUISOPOT｣を導入しました。
-                        水を注ぐだけで水素水を作ることができる点が決め手でした。飲んでみてびっくり。
-                        水の舌触りが柔らかく、市販のミネラルウォーターと比べても味が美味しかったのでずっと愛用しています。
-                      </p>
-                      <p class="slider-card__voice-left">O様（福岡県 30代）</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice8.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      最近はおうちで簡単に水素水を作っています。
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        「子供の健康のために・・」いろいろと探してSUISOPOTにたどり着きました！
-                        水道水を注ぐだけという手軽さも便利ですし、コンパクトなので置き場所が自由自在というものうれしいです。
-                      </p>
-                      <p class="slider-card__voice-left">長谷川直也様</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-card">
-                  <div class="slider-card__image2">
-                    <img src="./img/slider-card__image-voice9.png" alt="" />
-                  </div>
-                  <div class="slider-card__body2">
-                    <h3 class="slider-card__title2">
-                      家族全員でナノバブル水素水はじめました！
-                    </h3>
-                    <div class="slider-card__voice js-accordion">
-                      <p class="accordion-content">
-                        健康のことを考えて我が家では全員このナノバブル水素水を飲んでいますね。
-                        ミネラル分が豊富な点も気に入っています。
-                        キッチンにおいておけば料理にもさっと使えるのでありがたいです。
-                      </p>
-                      <p class="slider-card__voice-left">稲垣遥様</p>
-                      <div class="slider-card__voice-right">
-                        <a href="javascript:void(0)"
-                          ><img
-                            src="./img/slider__voice-arrow.png"
-                            loading="lazy"
-                            alt=""
-                        /></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="js-slider-pagination2" class="swiper-pagination2"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="use-step">
-      <div class="use-step__inner inner">
-        <h2 class="section__title use-step__header-title">
-          ご利用までの3ステップ
-        </h2>
-        <div class="use-step__items">
-          <div class="use-step__item">
-            <p class="use-step__catch-pc">たったの５分で完結！</p>
-            <div class="use-step__image">
-              <img src="./img/use-step__image1.png" loading="lazy" alt="" />
-            </div>
-            <div class="use-step__body">
-              <p class="use-step__catch-sp">たったの５分で完結！</p>
-              <h3 class="use-step__title">お申込</h3>
-              <p class="use-step__text">
-                ネットもしくはお電話からお申し込みいただけます
-              </p>
-            </div>
-          </div>
-          <div class="use-step__item">
-            <p class="use-step__catch-pc">早い！</p>
-            <div class="use-step__image">
-              <img src="./img/use-step__image2.png" loading="lazy" alt="" />
-            </div>
-            <div class="use-step__body use-step__body2">
-              <p class="use-step__catch-sp">早い！</p>
-              <h3 class="use-step__title">ご自宅に届きます</h3>
-              <p class="use-step__text">
-                お申込から通常1～3営業日にて製品が発送されます。
-              </p>
-            </div>
-          </div>
-          <div class="use-step__item use-step__body2">
-            <p class="use-step__catch-pc">すぐ使える！</p>
-            <div class="use-step__image">
-              <img src="./img/use-step__image3.png" loading="lazy" alt="" />
-            </div>
-            <div class="use-step__body use-step__body3">
-              <p class="use-step__catch-sp">すぐ使える！</p>
-              <h3 class="use-step__title">ご利用開始</h3>
-              <p class="use-step__text">ご自身で簡単に設置可能</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="preparation__container">
-      <section class="preparation">
-        <div class="preparation__inner inner">
-          <h2 class="section__title preparation__header-title">
-            簡単準備4ステップ
-          </h2>
-          <div class="preparation__items">
-            <div class="preparation__item">
-              <p class="preparation__catch-pc">挿すだけ！</p>
-              <div class="preparation__image">
-                <img
-                  src="./img/preparation__image1.png"
-                  loading="lazy"
-                  alt=""
-                />
-              </div>
-              <div class="preparation__body">
-                <p class="preparation__catch-sp">挿すだけ！</p>
-                <h3 class="preparation__title">電源をとる</h3>
-                <p class="preparation__text">コンセントを挿します</p>
-              </div>
-            </div>
-            <div class="preparation__item">
-              <p class="preparation__catch-pc">入れるだけ！</p>
-              <div class="preparation__image">
-                <img
-                  src="./img/preparation__image2.png"
-                  loading="lazy"
-                  alt=""
-                />
-              </div>
-              <div class="preparation__body preparation__body2">
-                <p class="preparation__catch-sp">入れるだけ！</p>
-                <h3 class="preparation__title">タンクに水を入れる</h3>
-                <p class="preparation__text">
-                  水道水を入れます<br />
-                  1回に5ℓまで生成できます
-                </p>
-              </div>
-            </div>
-            <div class="preparation__item">
-              <p class="preparation__catch-pc">押すだけ！</p>
-              <div class="preparation__image">
-                <img
-                  src="./img/preparation__image3.png"
-                  loading="lazy"
-                  alt=""
-                />
-              </div>
-              <div class="preparation__body preparation__body3">
-                <p class="preparation__catch-sp">押すだけ！</p>
-                <h3 class="preparation__title">ボタンを押す</h3>
-                <p class="preparation__text">
-                  還元時間を設定し<br class="sp-hidden" />
-                  スタートボタンを押すだけ
-                </p>
-              </div>
-            </div>
-            <div class="preparation__item preparation__item4">
-              <p class="preparation__catch-pc">「ピッ」となったら完成！</p>
-              <div class="preparation__image">
-                <img
-                  src="./img/preparation__image4.png"
-                  loading="lazy"
-                  alt=""
-                />
-              </div>
-              <div class="preparation__body preparation__body4">
-                <p class="preparation__catch-sp">「ピッ」となったら完成！</p>
-                <h3 class="preparation__title">完成</h3>
-                <p class="preparation__text">
-                  還元完了時は音と<br />
-                  停止ランプでお知らせ
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="video">
-      <div class="video__inner inner">
-        <div class="video__wrapper">
-          <a href="#" class="video__left-link">
-            <div class="video__left">
-              <div class="video__content">
-                <div class="video__content-container">
-                  <div class="video__content-left">
-                    <img src="./img/video__image1.png" loading="lazy" alt="" />
-                  </div>
-                  <div class="video__content-left-arrow">
-                    <img src="./img/video__logo.png" loading="lazy" alt="" />
-                  </div>
-                </div>
-                <div class="video__content-right">
-                  <div class="video__content-right-body">
-                    <div class="video__content-right-image">
-                      <div class="video__content-right-arrow">
-                        <img
-                          src="./img/video__logo2.svg"
-                          loading="lazy"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <p class="video__content-right-text">詳しいご使用方法</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="video__right-link">
-            <div class="video__right">
-              <div class="video__content">
-                <div class="video__content-container">
-                  <div class="video__content-left">
-                    <img src="./img/video__image2.png" loading="lazy" alt="" />
-                  </div>
-                  <div class="video__content-left-arrow">
-                    <img src="./img/video__logo.png" loading="lazy" alt="" />
-                  </div>
-                </div>
-                <div class="video__content-right">
-                  <div class="video__content-right-body">
-                    <div class="video__content-right-image2">
-                      <img src="./img/video__logo3.svg" loading="lazy" alt="" />
-                    </div>
-                    <p class="video__content-right-text">詳しいお手入れ方法</p>
-                  </div>
-                </div>
-              </div>
+        <p class="cta__text">最短<span>1</span>分で完了！</p>
+        <div class="cta__link">
+          <a href="#">
+            <div class="cta__link-item">
+              <p class="cta__link-text1">無料</p>
+              <p class="cta__link-text2">で資料を請求する</p>
             </div>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="labo__bg">
-      <img src="./img/labo__bg.png" loading="lazy" alt="" />
-    </div>
-    <section class="labo">
-      <div class="labo__inner inner">
-        <div class="labo__header-title">
-          <span><h2 class="labo__title">ナノバブルLabo</h2></span>
-          <span
-            ><p class="labo__sub-title">
-              健康な暮らしのためのナノバブルとお水に関する情報サイト
-            </p></span
-          >
+    <section class="tab">
+      <div class="tab__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">選ばれるポイント</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
         </div>
-        <div class="labo__items">
-          <a href="#" class="labo__item-link">
-            <div class="labo__item">
-              <div class="labo__image">
-                <img src="./img/labo__image1.png" loading="lazy" alt="" />
-              </div>
-              <div class="labo__body">
-                <h3 class="labo__text">
-                  還元水素水<br />
-                  ペットも飲める？
-                </h3>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="labo__item-link">
-            <div class="labo__item">
-              <div class="labo__image">
-                <img src="./img/labo__image2.png" loading="lazy" alt="" />
-              </div>
-              <div class="labo__body">
-                <h3 class="labo__text">
-                  ウルトラファインバブル<br />
-                  医療分野での活用
-                </h3>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="labo__item-link">
-            <div class="labo__item">
-              <div class="labo__image">
-                <img src="./img/labo__image3.png" loading="lazy" alt="" />
-              </div>
-              <div class="labo__body">
-                <h3 class="labo__text">
-                  還元水素水で<br />
-                  カラダの活性酸素を除去
-                </h3>
-              </div>
-            </div>
-          </a>
+        <div class="tab__lead">
+          <div class="tab__lead-image">
+            <img src="./img/tab__logo.png" loading="lazy" alt="" />
+          </div>
+          <p class="tab__lead-text1">
+            お客様の課題に寄り添った<span>きめ細やかなレクチャーが可能</span>です
+          </p>
+          <p class="tab__lead-text2">
+            領域を使いお客様毎にAI活用の最適化を実現する、レクチャーサポートを実施しています。
+          </p>
         </div>
-        <div class="labo__link section__link">
-          <a href="#">ナノバブルLaboをもっと見る</a>
+        <nav>
+          <ul>
+            <li class="tab-item tab-green is-active">
+              <a href="javascript:void(0);" data-content="content1"
+                >サポート例<span>01</span></a
+              >
+            </li>
+            <li class="tab-item tab-red">
+              <a href="javascript:void(0);" data-content="content2"
+                >サポート例<span>02</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <main>
+          <div class="content content1 is-active">
+            <div class="tab1">
+              <div class="tab1__wrapper">
+                <div class="tab1__header-left">
+                  <img src="./img/tab__image1.png" loading="lazy" alt="" />
+                </div>
+                <div class="tab1__right">
+                  <img src="./img/tab__image2.png" loading="lazy" alt="" />
+                </div>
+              </div>
+              <div class="tab1__wrapper2 tab1__wrapper3">
+                <div class="tab1__left tab1__left2">
+                  <h3 class="tab1__left2-title">AIライティング</h3>
+                </div>
+                <div class="tab1__right2">
+                  <p class="tab1__right2-text">
+                    レストランのウェブサイトやメニューのコピーをAIライティングで生成します。
+                  </p>
+                </div>
+              </div>
+              <div class="tab1__wrapper2 tab1__wrapper4">
+                <div class="tab1__left tab1__left3">
+                  <h3 class="tab1__left2-title">AI画像生成</h3>
+                </div>
+                <div class="tab1__right2">
+                  <p class="tab1__right2-text">
+                    レストランの内装や料理の写真を基に、AI画像生成を使用して美味しそうな料理のイメージ画像や、店内の雰囲気を伝える画像を生成します。
+                  </p>
+                </div>
+              </div>
+              <div class="tab1__wrapper2 tab1__wrapper5">
+                <div class="tab1__left tab1__left4">
+                  <h3 class="tab1__left2-title">AIチャット</h3>
+                </div>
+                <div class="tab1__right2">
+                  <p class="tab1__right2-text">
+                    レストランのウェブサイトや予約システムにAIチャットを組み込みます。カスタマーサポートとしても活用され、顧客の問い合わせに迅速に対応します。
+                  </p>
+                </div>
+              </div>
+              <p class="tab1__text">
+                レストランのプレゼンテーションや<span>顧客サービスが向上し、効率的な運営が可能</span>となります。
+              </p>
+            </div>
+          </div>
+          <div class="content content2">
+            <div class="tab1">
+              <div class="tab1__wrapper tab2__wrapper2">
+                <div class="tab1__header-left">
+                  <img src="./img/tab2__image1.png" loading="lazy" alt="" />
+                </div>
+                <div class="tab1__right">
+                  <img src="./img/tab2__image2.png" loading="lazy" alt="" />
+                </div>
+              </div>
+              <div class="tab1__wrapper2 tab1__wrapper3 tab1__wrapper6">
+                <div class="tab1__left tab1__left5">
+                  <h3 class="tab1__left2-title">AIライティング</h3>
+                </div>
+                <div class="tab1__right2">
+                  <p class="tab1__right2-text">
+                    火災、地震、非常時の避難手順など様々な防災シナリオや対応手順のコンテンツを作成します。
+                  </p>
+                </div>
+              </div>
+              <div class="tab1__wrapper2 tab1__wrapper4 tab1__wrapper7">
+                <div class="tab1__left tab1__left6">
+                  <h3 class="tab1__left2-title">AI ボイスオーバー</h3>
+                </div>
+                <div class="tab1__right2">
+                  <p class="tab1__right2-text">
+                    テキストを自然な音声に変換します。トレーニングアプリは、従業員に対してリアルな状況での対応手順を音声で指導します。
+                  </p>
+                </div>
+              </div>
+              <div class="tab1__wrapper2 tab1__wrapper5 tab1__wrapper8">
+                <div class="tab1__left tab1__left7">
+                  <h3 class="tab1__left2-title">音声をテキストへAI変換</h3>
+                </div>
+                <div class="tab1__right2">
+                  <p class="tab1__right2-text">
+                    トレーニングの一環として、AIを使用して音声メッセージをテキストに変換します。これにより、従業員はテキスト形式で指示を確認できるようになります。
+                  </p>
+                </div>
+              </div>
+              <p class="tab1__text">
+                従業員はリアルな訓練を仮想的な環境で受けることができ、<span>実際の緊急事態に対する準備が向上</span>するでしょう。
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section class="tab-sp">
+      <div class="tab-sp__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">選ばれるポイント</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">Values</p>
+        </div>
+        <div class="tab-sp__lead">
+          <div class="tab-sp__lead-image">
+            <img src="./img/tab__logo.png" loading="lazy" alt="" />
+          </div>
+          <p class="tab-sp__lead-text1">
+            お客様の課題に寄り添った<span>きめ<br />細やかなレクチャーが</span
+            >可能です
+          </p>
+          <p class="tab-sp__lead-text2">
+            領域を使いお客様毎にAI活用の最適化を実現す<br />る、レクチャーサポートを実施しています。
+          </p>
+        </div>
+        <div class="tab-sp__items">
+          <div class="tab-sp__item">
+            <div class="tab-sp__header">
+              <p class="tab-sp__text">サポート例<span>01</span></p>
+            </div>
+            <div class="tab-sp__content">
+              <div class="tab-sp__content-image">
+                <img src="./img/sp/tab__image1.png" loading="lazy" alt="" />
+              </div>
+              <div class="tab-sp__accordion js-accordion">
+                <div class="tab-sp__accordion-content">
+                  <div class="tab-sp__accordion-content-image">
+                    <img src="./img/sp/tab__image2.png" loading="lazy" alt="" />
+                  </div>
+                  <div class="tab-sp__accordion-content-item">
+                    <h3
+                      class="tab-sp__accordion-content-title tab-sp__accordion-content-title1"
+                    >
+                      AIライティング
+                    </h3>
+                    <p class="tab-sp__accordion-content-text">
+                      レストランのウェブサイトやメニューのコピーをAIライティングで生成します。
+                    </p>
+                  </div>
+                  <div
+                    class="tab-sp__accordion-content-item tab-sp__accordion-content-item2"
+                  >
+                    <h3
+                      class="tab-sp__accordion-content-title tab-sp__accordion-content-title2"
+                    >
+                      AI画像生成
+                    </h3>
+                    <p class="tab-sp__accordion-content-text">
+                      レストランの内装や料理の写真を基に、AI画像生成を使用して美味しそうな料理のイメージ画像や、店内の雰囲気を伝える画像を生成します。
+                    </p>
+                  </div>
+                  <div
+                    class="tab-sp__accordion-content-item tab-sp__accordion-content-item3"
+                  >
+                    <h3
+                      class="tab-sp__accordion-content-title tab-sp__accordion-content-title3"
+                    >
+                      AIチャット
+                    </h3>
+                    <p class="tab-sp__accordion-content-text">
+                      レストランのウェブサイトや予約システムにAIチャットを組み込みます。カスタマーサポートとしても活用され、顧客の問い合わせに迅速に対応します。
+                    </p>
+                  </div>
+                  <p class="tab-sp__accordion-content-text2">
+                    レストランのプレゼンテーションや<span>顧客サービスが向上し、効率的な運営が可能</span>となります。
+                  </p>
+                </div>
+                <div class="tab-sp__content-arrow">
+                  <a href="javascript:void(0)" onclick="toggleAccordion(this)">
+                    <img
+                      src="./img/sp/tab-sp__arrow.png"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-sp__item tab-sp__item2">
+            <div class="tab-sp__header tab-sp__header2">
+              <p class="tab-sp__text">サポート例<span>02</span></p>
+            </div>
+            <div class="tab-sp__content">
+              <div class="tab-sp__content-image2">
+                <img src="./img/sp/tab2__image1.png" loading="lazy" alt="" />
+              </div>
+              <div class="tab-sp__accordion js-accordion">
+                <div class="tab-sp__accordion-content">
+                  <div class="tab-sp__accordion-content-image">
+                    <img
+                      src="./img/sp/tab2__image2.png"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="tab-sp__accordion-content-item tab-sp__accordion-content-item1"
+                  >
+                    <h3
+                      class="tab-sp__accordion-content-title tab-sp__accordion-content-title4"
+                    >
+                      AIライティング
+                    </h3>
+                    <p class="tab-sp__accordion-content-text">
+                      火災、地震、非常時の避難手順など様々な防災シナリオや対応手順のコンテンツを作成します。
+                    </p>
+                  </div>
+                  <div
+                    class="tab-sp__accordion-content-item tab-sp__accordion-content-item2"
+                  >
+                    <h3
+                      class="tab-sp__accordion-content-title tab-sp__accordion-content-title5"
+                    >
+                      AIボイスオーバー
+                    </h3>
+                    <p class="tab-sp__accordion-content-text">
+                      テキストを自然な音声に変換します。トレーニングアプリは、従業員に対してリアルな状況での対応手順を音声で指導します。
+                    </p>
+                  </div>
+                  <div
+                    class="tab-sp__accordion-content-item tab-sp__accordion-content-item3"
+                  >
+                    <h3
+                      class="tab-sp__accordion-content-title tab-sp__accordion-content-title6"
+                    >
+                      音声をテキストへAI変換
+                    </h3>
+                    <p class="tab-sp__accordion-content-text">
+                      トレーニングの一環として、AIを使用して音声メッセージをテキストに変換します。これにより、従業員はテキスト形式で指示を確認できるようになります。
+                    </p>
+                  </div>
+                  <p class="tab-sp__accordion-content-text2">
+                    レストランのプレゼンテーションや<span>顧客サービスが向上し、効率的な運営が可能</span>となります。
+                  </p>
+                </div>
+                <div class="tab-sp__content-arrow">
+                  <a href="javascript:void(0)" onclick="toggleAccordion(this)">
+                    <img
+                      src="./img/sp/tab-sp__arrow.png"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="qa__bg">
-      <img src="./img/qa__bg.png" loading="lazy" alt="" />
+    <section class="voice">
+      <div class="voice__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">お客様の声</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">Voice</p>
+        </div>
+        <div class="voice__items">
+          <div class="voice__item">
+            <div class="voice__image">
+              <img src="./img/vice__icon1.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="voice__title">カスタマーサポートの自動化</h3>
+            <p class="voice__lead">
+              チャットボットや音声応答システムを使って、カスタマーサポートを24時間提供。<span>顧客の問い合わせに迅速かつ正確に対応することができる</span>ようになりました。
+            </p>
+            <p class="voice__text2">使用領域</p>
+            <div class="voice__texts">
+              <p class="voice__text voice__text3">AIチャット</p>
+              <p class="voice__text voice__text4">AIボイスオーバー</p>
+              <p class="voice__text voice__text5">音声をテキストへAI変換</p>
+            </div>
+          </div>
+          <div class="voice__item">
+            <div class="voice__image2">
+              <img src="./img/vice__icon2.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="voice__title">自動車の自動運転技術</h3>
+            <p class="voice__lead">
+              自動車の運転支援や自動運転技術の開発を行う事業。センサーデータとAIを組み合わせて画像も組み込みながら安全な自動運転体験を提供し、<span>お客様にも好評</span>です。
+            </p>
+            <p class="voice__text2 voice__text21">使用領域</p>
+            <div class="voice__texts">
+              <p class="voice__text voice__text6">AIライティング</p>
+              <p class="voice__text voice__text4">AIボイスオーバー</p>
+            </div>
+          </div>
+          <div class="voice__item">
+            <div class="voice__image3">
+              <img src="./img/vice__icon3.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="voice__title">予測分析と市場予測</h3>
+            <p class="voice__lead">
+              ビッグデータとAIを組み合わせて、消費者の行動を予測し、ビジネス戦略の決定に役立つ情報を構築。<span>前年比15%の売り上げアップ</span>に繋がっています。
+            </p>
+            <p class="voice__text2 voice__text22">使用領域</p>
+            <div class="voice__texts">
+              <p class="voice__text voice__text6">AIライティング</p>
+              <p class="voice__text voice__text3">AIチャット</p>
+              <p class="voice__text voice__text7">AI画像生成</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">ご利用開始の流れ</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">Step</p>
+        </div>
+        <div class="step__items">
+          <div class="step__item">
+            <p class="step__num">01</p>
+            <div class="step__image">
+              <img src="./img/step__icon1.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="step__title">お問い合わせ</h3>
+            <p class="step__text">当ページからお気軽にお問い合わせください！</p>
+          </div>
+          <div class="step__item">
+            <p class="step__num">02</p>
+            <div class="step__image">
+              <img src="./img/step__icon2.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="step__title">サービスのご案内</h3>
+            <p class="step__text">サービスの詳しいご案内をさせていただきます</p>
+          </div>
+          <div class="step__item">
+            <p class="step__num">03</p>
+            <div class="step__image">
+              <img src="./img/step__icon3.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="step__title">アカウント開設</h3>
+            <p class="step__text">手引きに沿ってアカウントを開設いただきます</p>
+          </div>
+          <div class="step__item">
+            <p class="step__num">04</p>
+            <div class="step__image">
+              <img src="./img/step__icon4.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="step__title">アカウント情報送付</h3>
+            <p class="step__text">アカウント情報を発行いたします</p>
+          </div>
+          <div class="step__item">
+            <p class="step__num">05</p>
+            <div class="step__image">
+              <img src="./img/step__icon5.png" loading="lazy" alt="" />
+            </div>
+            <h3 class="step__title">ご利用開始</h3>
+            <p class="step__text">fresh groveをご体験ください</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step-sp">
+      <div class="step-sp__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">ご利用開始の流れ</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">Step</p>
+        </div>
+        <div class="step-sp__wrapper step-sp__wrapper1">
+          <div class="step-sp__left">
+            <p class="step-sp__num">01</p>
+            <div class="step-sp__image">
+              <img src="./img/step__icon1.png" loading="lazy" alt="" />
+            </div>
+          </div>
+          <div class="step-sp__right">
+            <h3 class="step-sp__title">お問い合わせ</h3>
+            <p class="step-sp__text">
+              当ページからお気軽にお問い合わせください！
+            </p>
+          </div>
+        </div>
+        <div class="step-sp__wrapper step-sp__wrapper2">
+          <div class="step-sp__left step-sp__left2">
+            <p class="step-sp__num">02</p>
+            <div class="step-sp__image">
+              <img src="./img/step__icon2.png" loading="lazy" alt="" />
+            </div>
+          </div>
+          <div class="step-sp__right">
+            <h3 class="step-sp__title">サービスのご案内</h3>
+            <p class="step-sp__text">
+              サービスの詳しいご案内をさせていただきます
+            </p>
+          </div>
+        </div>
+        <div class="step-sp__wrapper step-sp__wrapper3">
+          <div class="step-sp__left step-sp__left2">
+            <p class="step-sp__num">03</p>
+            <div class="step-sp__image">
+              <img src="./img/step__icon3.png" loading="lazy" alt="" />
+            </div>
+          </div>
+          <div class="step-sp__right">
+            <h3 class="step-sp__title">アカウント開設</h3>
+            <p class="step-sp__text">
+              手引きに沿ってアカウントを開設いただきます
+            </p>
+          </div>
+        </div>
+        <div class="step-sp__wrapper step-sp__wrapper4">
+          <div class="step-sp__left step-sp__left2">
+            <p class="step-sp__num">04</p>
+            <div class="step-sp__image">
+              <img src="./img/step__icon4.png" loading="lazy" alt="" />
+            </div>
+          </div>
+          <div class="step-sp__right">
+            <h3 class="step-sp__title">アカウント情報送付</h3>
+            <p class="step-sp__text">アカウント情報を発行いたします</p>
+          </div>
+        </div>
+        <div class="step-sp__wrapper step-sp__wrapper5">
+          <div class="step-sp__left step-sp__left2">
+            <p class="step-sp__num">05</p>
+            <div class="step-sp__image">
+              <img src="./img/step__icon5.png" loading="lazy" alt="" />
+            </div>
+          </div>
+          <div class="step-sp__right">
+            <h3 class="step-sp__title">ご利用開始</h3>
+            <p class="step-sp__text">fresh groveをご体験ください</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="price">
+      <div class="price__inner inner">
+        <div class="section__title">
+          <h2 class="section__title-main">料金プラン</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">Price plan</p>
+        </div>
+        <div class="price__wrapper">
+          <div class="price__left">
+            <p class="price__header price__left-header">
+              当社と保守契約をされているお客様
+            </p>
+            <div class="price__left-body">
+              <p class="price__text price__left-text1">無料</p>
+              <p class="price__text price__left-text2">
+                使用できる文字数などの<span>制限がかかります</span>
+              </p>
+              <div class="price__left-image">
+                <img src="./img/price__image.png" loading="lazy" alt="" />
+              </div>
+              <div class="price__left-image-sp">
+                <img src="./img/sp/price__image.png" loading="lazy" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="price__right">
+            <p class="price__header price__right-header">
+              当社と保守未契約のお客様
+            </p>
+            <div class="price__right-body">
+              <p class="price__text price__right-text1">
+                月額　10,000<span>円（税込）</span>
+              </p>
+              <p class="price__text price__right-text2">
+                使用制限なくご利用いただけます
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta cta2">
+      <div class="cta__inner inner">
+        <p class="cta__text">最短<span>1</span>分で完了！</p>
+        <div class="cta__link">
+          <a href="#">
+            <div class="cta__link-item">
+              <p class="cta__link-text1">無料</p>
+              <p class="cta__link-text2">で資料を請求する</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-    <section class="qa">
-      <div class="qa__inner inner">
-        <h2 class="section__title">よくある質問</h2>
+
+    <section id="faq" class="qa">
+      <div class="qa__inner">
+        <div class="section__title">
+          <h2 class="section__title-main">よくある質問</h2>
+          <div class="section__title-image">
+            <img src="./img/section__image-title.png" loading="lazy" alt="" />
+          </div>
+          <p class="section__title-sub">FAQ</p>
+        </div>
         <div class="qa-boxes">
           <div class="qa-box is-open">
             <button type="button" class="qa-box__head js-accordion">
@@ -1301,7 +898,7 @@
                 <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
               </span>
               <span class="qa-box__head-text"
-                >利⽤料⾦について教えてください。</span
+                >導入にあたってどんな準備が必要ですか？</span
               >
             </button>
             <div class="qa-box__body">
@@ -1310,52 +907,8 @@
                   <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
                 </span>
                 <span class="qa-box__a-text"
-                  >SUISOPOT（スイソポット）のご利⽤には以下の料⾦がかかります。<br />
-                  ⽉額利⽤料：3,800円（税込）初期手数料：5,000円（税込）<br />
-                  送料：無料上記以外の料⾦は⼀切かかりません。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >申し込んでから、いつ届きますか？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >最短でお申し込み日の1～3営業日以内の出荷となります。
-                  配送地域や交通状況によりお届けが遅れる場合もございます。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >支払い方法には何がありますか？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >下記の2つからお選びいただけます。
-                  ・クレジットカード（VISA/JCB/Master
-                  Card）・銀行口座引落し</span
+                  >以下のAPIを活用しています。<br />
+                  GPT 4、GPT 3.5、GPT 3、Dall-E、Ada、Curie、Davinci</span
                 >
               </div>
             </div>
@@ -1369,7 +922,7 @@
                 <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
               </span>
               <span class="qa-box__head-text"
-                >更新日はどのようなサイクルになりますか？</span
+                >本導入までにお試しなどのプランで検討することはできますか？</span
               >
             </button>
             <div class="qa-box__body">
@@ -1378,8 +931,8 @@
                   <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
                 </span>
                 <span class="qa-box__a-text"
-                  >お申込日を起算日として、毎月お申込日と同じ日付が更新日となります。
-                  （例：1月23日申込の場合、次回更新が2月23日となります。）</span
+                  >以下のAPIを活用しています。<br />
+                  GPT 4、GPT 3.5、GPT 3、Dall-E、Ada、Curie、Davinci</span
                 >
               </div>
             </div>
@@ -1387,13 +940,13 @@
           <div class="qa-box is-open">
             <button
               type="button"
-              class="qa-box__head qa-box__head2 js-accordion"
+              class="qa-box__head qa-box__head3 js-accordion"
             >
               <span class="qa-box__head-icon">
                 <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
               </span>
               <span class="qa-box__head-text"
-                >途中で解約したいのですが費用はかかりますか？</span
+                >fresh groveはどのようなAPIを活用していますか？</span
               >
             </button>
             <div class="qa-box__body">
@@ -1402,8 +955,8 @@
                   <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
                 </span>
                 <span class="qa-box__a-text"
-                  >解約手数料は不要です。
-                  解約ご希望日の1ヶ月前迄に解約申請をお願いします。</span
+                  >以下のAPIを活用しています。<br />
+                  GPT 4、GPT 3.5、GPT 3、Dall-E、Ada、Curie、Davinci</span
                 >
               </div>
             </div>
@@ -1411,13 +964,13 @@
           <div class="qa-box is-open">
             <button
               type="button"
-              class="qa-box__head qa-box__head2 js-accordion"
+              class="qa-box__head qa-box__head qa-box__head4 js-accordion"
             >
               <span class="qa-box__head-icon">
                 <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
               </span>
               <span class="qa-box__head-text"
-                >マイクロバブルとナノバブルの違いは？</span
+                >保守契約とはどういったものですか？</span
               >
             </button>
             <div class="qa-box__body">
@@ -1426,162 +979,8 @@
                   <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
                 </span>
                 <span class="qa-box__a-text"
-                  >マイクロバブルとは直径約1～50µm以下の小さな泡のことで、ナノバブルは0.1µm以下の目に見えない超微細な泡となります。マイクロバブルはすぐに弾けて消えてしまいますが、ナノバブルは1ヶ月以上も泡のまま残留できるといった特徴があります。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >ナノバブルはなぜカラダにいいの？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >ナノバブル水素水は浸透力に優れ、カラダのすみずみまでナノバブル水素と酸素を届けます。また、通常のお水は酸化しているのに対して、SUISOPOTで生成したナノバブル水素水は抗酸化力が高く、カラダの酸化を防ぎます。
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >タンクの容量はどのくらいですか？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >タンク容量は5リットルです。
-                  コップ約25杯分を作ることができますので、たっぷりお使いいただけます。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text">本当に使い放題ですか？</span>
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >はい、水道水を注ぐだけでお好きなだけご利用いただけます。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text">お手入れは必要ですか？</span>
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >フィルター交換は不要です。グランド電極にイオン化したミネラルが付着する場合がありますので、その際はポット洗浄剤やクエン酸で洗浄してください。また、付属のミネラルプレートも定期的に洗浄してください。詳しくは取扱説明書をご覧ください。また使用方法、お手入れ方法の動画でもご確認いただけます。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text">衛生面が気になります。</span>
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >タンク内は定期的に清掃いただくことをおすすめします。
-                  生成されたナノバブル水素水は、2日以内にお飲みください。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >ミネラルプレートの交換サイクルは？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >ミネラルプレート1セットの交換サイクルは6ヶ月となり、製品お届け時は1年分（2セット）が同封されております。その後ご契約から1年経過毎に1年分（2セット）を無料にてお届けしますので、お客様ご自身でご交換をお願いします。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text">どんな味ですか？</span>
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >付属のミネラルプレートからミネラルが微量に溶け出し、まろやかで角のとれた飲みやすい味です。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >病気や妊婦さんでも飲めますか？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >問題ありませんので、安心してお飲みください。
-                  ご心配な方はかかりつけのお医者様にご相談ください。</span
+                  >以下のAPIを活用しています。<br />
+                  GPT 4、GPT 3.5、GPT 3、Dall-E、Ada、Curie、Davinci</span
                 >
               </div>
             </div>
@@ -1589,13 +988,13 @@
           <div class="qa-box is-open">
             <button
               type="button"
-              class="qa-box__head qa-box__head2 js-accordion"
+              class="qa-box__head qa-box__head qa-box__head5 js-accordion"
             >
               <span class="qa-box__head-icon">
                 <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
               </span>
               <span class="qa-box__head-text"
-                >毎日どのくらい飲めばよいのでしょうか？？</span
+                >保守契約金はおいくらですか？</span
               >
             </button>
             <div class="qa-box__body">
@@ -1604,28 +1003,8 @@
                   <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
                 </span>
                 <span class="qa-box__a-text"
-                  >特に決まりはありませんが、一般的に1日
-                  1.5～2ℓの水分補給が健康に良いと言われております。</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="qa-box is-open">
-            <button type="button" class="qa-box__head js-accordion">
-              <span class="qa-box__head-icon">
-                <img src="./img/qa__icon-q.png" loading="lazy" alt="" />
-              </span>
-              <span class="qa-box__head-text"
-                >飲み水以外で使っても平気ですか？</span
-              >
-            </button>
-            <div class="qa-box__body">
-              <div class="qa-box__a">
-                <span class="qa-box__a-icon">
-                  <img src="./img/qa__icon-a.png" loading="lazy" alt="" />
-                </span>
-                <span class="qa-box__a-text"
-                  >はい、料理やコーヒー、紅茶、お酒の割り水、ペットの飲料水、生け花のお水、野菜の洗浄など様々な場面でご使用いただけます。</span
+                  >以下のAPIを活用しています。<br />
+                  GPT 4、GPT 3.5、GPT 3、Dall-E、Ada、Curie、Davinci</span
                 >
               </div>
             </div>
@@ -1634,208 +1013,168 @@
       </div>
     </section>
 
-    <section class="guide">
-      <div class="guide__inner inner">
-        <h2 class="section__title">ご利用ガイド</h2>
-        <div class="guide__items">
-          <div class="guide__item">
-            <h3 class="guide__title">料金について</h3>
-            <p class="guide__text">
-              SUISOPOT（スイソポット）のご利用には以下の料金がかかります。
+    <div class="effort">
+      <div class="effort__inner inner">
+        <div class="effort__wrapper">
+          <div class="effort__left">
+            <p class="effort__title">
+              お客様<span>の</span>業務効率化<span>を</span>実現する
             </p>
-            <ul class="guide__list">
-              <li class="guide__list-item">・初期手数料　5,000円</li>
-              <li class="guide__list-item">・月額利用料　3,800円</li>
-            </ul>
-          </div>
-          <div class="guide__item">
-            <h3 class="guide__title">送料について</h3>
-            <p class="guide__text">
-              生成器本体、ミネラルプレートのお届け時の送料は無料です。
+            <div class="effort__image-text">
+              <img src="./img/effort__image-text.png" loading="lazy" alt="" />
+            </div>
+            <p class="effort__text">
+              多くのお客様がAIの活用に未知数な中、私たちは独自のサポートを提供することを決意し、fresh
+              groveを開発しました。当サービスを活用することで、<span>お客様はコア業務へ集中し、業務効率化を実現できます</span>。我々はさまざまな取り組みを通じて、これからもお客様の成功を支援いたします。
             </p>
           </div>
-          <div class="guide__item">
-            <h3 class="guide__title">配送方法について</h3>
-            <p class="guide__text">
-              ご注文いただきました製品は、ヤマト運輸での発送とさせて頂いております。<br />
-              通常、お申込みから1～3営業日以内に製品出荷をいたします。交通状況や天候によってはご到着が遅れる場合もありますのでご了承くださいませ。
-            </p>
-          </div>
-          <div class="guide__item">
-            <h3 class="guide__title">お支払い方法について</h3>
-            <p class="guide__text">
-              インターネットからお申し込みの場合、「クレジットカード決済」のみとさせていただいております。<br />
-              銀行口座引き落としを希望される場合は、お電話での受付となりますので営業時間内に下記までご連絡ください。
-            </p>
-            <ul class="guide__list2">
-              <li class="guide__list-item2">カスタマーセンター</li>
-              <li class="guide__list-item2">TEL：03-1234-5678</li>
-              <li class="guide__list-item2">
-                営業時間 9：00～17：00 （平日のみ）
-              </li>
-            </ul>
-          </div>
-          <div class="guide__item">
-            <h3 class="guide__title">解約・交換について</h3>
-            <p class="guide__text">
-              ・解約について<br />
-              ご契約中でも、途中解約はご自由に行うことができます。解約をご希望される場合は、カスタマーセンターにご連絡ください。<br />
-              解約手数料は不要です。解約ご希望日の1ヶ月前迄に解約申請をお願いします。
-            </p>
-            <p class="guide__text guide__text2">
-              ・交換について<br />
-              万が一商品に不具合が発生した場合は、製品到着後速やかにカスタマーセンターにご連絡ください。<br />
-              <span
-                >※製品をお送りいただく送料につきましては、製品の瑕疵がある場合は当社が負担しますが、お客様のご都合による交換の場合は、お客様のご負担となります。</span
-              >
-            </p>
+          <div class="effort__right">
+            <img src="./img/effort__image-right.png" loading="lazy" alt="" />
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="news">
-      <div class="news__inner inner">
-        <h2 class="news__header-title section__title">
-          ニュース・メディア掲載実績
-        </h2>
-        <div class="news__items">
-          <a href="#" class="news__item-link">
-            <div class="news__item news__item1">
-              <div class="news__meta">
-                <time class="news__time" datetime="2023-6-13">2023.6.13</time>
-                <p class="news__label">blog</p>
-              </div>
-              <p class="news__title">
-                還元水素水はペットに与えても良い？おすすめの商品もご紹介
-              </p>
+    <section class="contact">
+      <div class="contact__inner">
+        <div class="contact__container">
+          <div class="section__title">
+            <h2 class="section__title-main">お問い合わせ</h2>
+            <div class="section__title-image">
+              <img src="./img/section__image-title.png" loading="lazy" alt="" />
             </div>
-          </a>
-          <a href="#" class="news__item-link">
-            <div class="news__item news__item2">
-              <div class="news__meta">
-                <time class="news__time" datetime="2023-6-13">2023.6.13</time>
-                <p class="news__label">NEWS</p>
-              </div>
-              <p class="news__title">
-                家庭用のレンタル水素水サーバーの選び方・おすすめランキング
-              </p>
-            </div>
-          </a>
-          <a href="#" class="news__item-link">
-            <div class="news__item news__item3">
-              <div class="news__meta">
-                <time class="news__time" datetime="2023-6-13">2023.6.13</time>
-                <p class="news__label">NEWS</p>
-              </div>
-              <p class="news__title">
-                「ウォーターサーバー比較」で SUISOPOTが紹介されました。
-              </p>
-            </div>
-          </a>
-          <a href="#" class="news__item-link">
-            <div class="news__item news__item4">
-              <div class="news__meta">
-                <time class="news__time" datetime="2023-6-13">2023.6.13</time>
-                <p class="news__label">NEWS</p>
-              </div>
-              <p class="news__title">
-                「ウォーターサーバー比較」でSUISOPOTが紹介されました。
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="news__link section__link">
-          <a href="#">もっと見る</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="product">
-      <div class="product__inner inner">
-        <h2 class="product__title section__title">製品仕様</h2>
-        <div class="product__wrapper">
-          <div class="product__left">
-            <img src="./img/product__image.png" loading="lazy" alt="" />
+            <p class="section__title-sub">Contact</p>
           </div>
-          <div class="product__right">
-            <div class="product__list">
-              <div class="product__item">
-                <p class="product__item-left">商品名</p>
-                <p class="product__item-right">SUISOPOT（スイソポット）</p>
+          <p class="contact__text">
+            当サービスについてご不明な点がございましたら、<br />
+            いつでもお気軽にお問い合わせください。
+          </p>
+          <form class="contact__form" id="contactForm">
+            <div class="contact__fields">
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-name" class="form-field__label"
+                      >お名前</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      class="form-text"
+                      type="text"
+                      name="your-name"
+                      id="your-name"
+                      placeholder="例）山田 太郎"
+                      required
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="product__item">
-                <p class="product__item-left">型番</p>
-                <p class="product__item-right">ＳＷ-800</p>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-company" class="form-field__label"
+                      >会社名</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      class="form-text"
+                      type="text"
+                      name="your-company"
+                      id="your-company"
+                      placeholder="例）株式会社 フレッシュグローブ"
+                      required
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="product__item">
-                <p class="product__item-left">サイズ</p>
-                <p class="product__item-right">約幅288×奥行356×高さ316(㎜)</p>
+              <div class="contact__field">
+                <div class="form-field form-field3">
+                  <div class="form-field__head">
+                    <label for="your-email" class="form-field__label"
+                      >メールアドレス</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      class="form-text"
+                      type="email"
+                      name="your-email"
+                      id="your-email"
+                      placeholder="例）sample@example.com"
+                      required
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="product__item">
-                <p class="product__item-left">本体質量</p>
-                <p class="product__item-right">約3.3kg</p>
-              </div>
-              <div class="product__item">
-                <p class="product__item-left">電源</p>
-                <p class="product__item-right">
-                  AC/DCアダプター入力AC100V 50/60Hz 出力DC24V 0.7A
-                </p>
-              </div>
-              <div class="product__item">
-                <p class="product__item-left">生成モード</p>
-                <p class="product__item-right">60分　90分　120分</p>
-              </div>
-              <div class="product__item">
-                <p class="product__item-left">容量</p>
-                <p class="product__item-right">5リットル</p>
-              </div>
-              <div class="product__item">
-                <p class="product__item-left">使用する水質</p>
-                <p class="product__item-right">ミネラルウォーター、水道水</p>
-              </div>
-              <div class="product__item">
-                <p class="product__item-left">付属品</p>
-                <p class="product__item-right">
-                  ミネラルプレート2個、ミネラルプレートケース2個、電極ホルダー2個
-                </p>
+              <div class="contact__field">
+                <div class="form-field form-field--type2">
+                  <div class="form-field__head">
+                    <label for="your-message" class="form-field__label"
+                      >お問合せ内容</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <textarea
+                      class="form-textarea"
+                      name="your-message"
+                      id="your-message"
+                      cols="30"
+                      rows="10"
+                      placeholder="お問合せ内容"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+            <div class="contact__privacy">
+              <label class="form-checkbox">
+                <input
+                  class="form-checkbox__input"
+                  type="checkbox"
+                  name="your-privacy"
+                  required
+                />
+                <span class="form-checkbox__text"
+                  ><a href="" target="_blank"
+                    ><strong>個人情報保護方針</strong></a
+                  ><span style="font-weight: normal">に同意する</span></span
+                >
+              </label>
+            </div>
+            <div class="contact__link">
+              <button type="submit" class="contact__button">
+                問い合わせをする
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__nav">
+      <div class="footer__inner inner">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="#"><img src="./img/footer__logo.png" loading="lazy" alt=""></a>
+          </div>
           <ul class="footer__list">
-            <li class="footer__item"><a href="#">特徴</a></li>
-            <li class="footer__item"><a href="#">お客様の声</a></li>
-            <li class="footer__item"><a href="#">ご利用料金</a></li>
-            <li class="footer__item"><a href="#">ご利用までの流れ</a></li>
-            <li class="footer__item"><a href="#">よくある質問</a></li>
-            <li class="footer__item">
-              <a href="#">特定商取引法に基づく表記</a>
-            </li>
+            <li class="footer__item"><a href="#">企業情報</a></li>
+            <li class="footer__item"><a href="#">利用規約</a></li>
+            <li class="footer__item"><a href="#">情報セキュリティ基本方針</a></li>
           </ul>
+          <div class="footer__right">&copy; 2023 fresh grove</div>
         </div>
-        <div class="footer__logo">
-          <img src="./img/footer__logo.png" loading="lazy" alt="" />
-        </div>
-        <p class="footer__text">
-          このサイトは株式会社コスモスエンタープライズ様のご協力のもと作成したコーディング用の練習課題です。<br
-            class="pc-hidden"
-          />実在の人物・団体とは関係ありません。
-        </p>
-        <p class="footer__copyright">
-          Copyright &copy;SUISO POT All rights reserved.
-        </p>
+        <p class="footer__copyright">このサイトはアローサル・テクノロジー株式会社様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません</p>
       </div>
-    </footer>
+    </footer> 
 
-    <!-- swiper  -->
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
